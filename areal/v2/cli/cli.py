@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import click
 
+from areal.v2.cli.training import train
 from areal.version import __version__
 
 
@@ -16,6 +17,4 @@ def cli() -> None:
     pass
 
 
-# Subcommand groups (inf / train / agent / ...) attach themselves to ``cli``
-# from their own modules — see e.g. ``areal.v2.cli.inference``,
-# ``areal.v2.cli.training``, ``areal.v2.cli.agent``.
+cli.add_command(train)
